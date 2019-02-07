@@ -1,0 +1,29 @@
+{
+  "plugin-data":
+  {
+    "name": "G3Nshop",
+    "description": "Simple online trading solution for Bludit."
+  },
+  "categoria-tienda": "Store Category",
+  "categorias": "Categories",
+  "moneda": "Currency",
+  "tienda": "Store",
+  "producto": "Product",
+  "productos-publicados": "Published Products",
+  "precio": "Price",
+  "tallas" : "Sizes",
+  "colores": "Colors",
+  "separar-x-comas": "Separate by commas",
+  "buscar": "Search",
+  "resultados": "results",
+  "cuenta-paypal": "Paypal Acount",
+  "modo-paypal": "Paypal Mode",
+  "pruebas": "Test",
+  "ventas": "Sales",
+  "carrito": "Cart",
+  "precios": "Precios",
+  "relacionados": "Relacionados",
+  "busqueda": "Búsqueda",
+  "agregar-carro": "Add to Cart",
+  "donar":"Consider making a donation, to continue developing this FREE pluging"
+}
