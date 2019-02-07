@@ -1,0 +1,2 @@
+<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+{"tienda":{"name":"Tienda","template":"","description":"","list":["plegable-mini","fixie","plegable-big","paseo-moderno","paseo-clasico","carrera-pro","triciclo-child","monta\u00f1a","chopper-plus","el\u00e9ctrica-paseo","monta\u00f1a-plegable","el\u00e9ctrica-plegable","carrera","monta\u00f1a-doble","plegable-cl\u00e1sico","plegable-origen","triciclo-big","chopper"]},"z-noticias":{"name":"Noticias","template":"","description":"","list":["nuevas-rebajas","nueva-apertura-en-el-centro"]}}

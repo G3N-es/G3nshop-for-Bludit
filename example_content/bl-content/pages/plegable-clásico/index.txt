@@ -1,0 +1,10 @@
+<p>Duis ligula turpis, egestas quis sem facilisis, bibendum dignissim turpis. Aenean sit amet pretium augue. Sed ut leo porttitor, fermentum dui vitae, luctus enim. Pellentesque viverra sapien eget commodo gravida.</p>
+<p>Maecenas sit amet turpis ac tellus vulputate bibendum id eget mi. Pellentesque ac nunc justo.</p>
+<h4>CARACTERÍSTICAS</h4>
+<ul>
+<li>Cuadro: Lorem ipsum</li>
+<li>Frenos: Lorem ipsum</li>
+<li>Suispensión: Lorem ipsum</li>
+<li>Peso: Lorem ipsum</li>
+<li>Dimensiones: Lorem ipsum</li>
+</ul>

@@ -1,0 +1,10 @@
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+<h4>CARACTERÍSTICAS</h4>
+<ul>
+<li>Cuadro: Lorem ipsum</li>
+<li>Frenos: Lorem ipsum</li>
+<li>Suispensión: Lorem ipsum</li>
+<li>Peso: Lorem ipsum</li>
+<li>Dimensiones: Lorem ipsum</li>
+</ul>

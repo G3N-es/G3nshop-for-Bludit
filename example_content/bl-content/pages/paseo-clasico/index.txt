@@ -1,0 +1,9 @@
+<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+<h4>CARACTERÍSTICAS</h4>
+<ul>
+<li>Cuadro: Lorem ipsum</li>
+<li>Frenos: Lorem ipsum</li>
+<li>Suispensión: Lorem ipsum</li>
+<li>Peso: Lorem ipsum</li>
+<li>Dimensiones: Lorem ipsum</li>
+</ul>

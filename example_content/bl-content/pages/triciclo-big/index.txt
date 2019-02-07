@@ -1,0 +1,9 @@
+<p>Donec varius nunc metus, sit amet venenatis libero placerat non. Donec gravida ac dui at venenatis. Sed ullamcorper ante et egestas faucibus. Etiam ornare lacus turpis, sed bibendum ante elementum malesuada. Curabitur vestibulum lobortis cursus.</p>
+<h4>CARACTERÍSTICAS</h4>
+<ul>
+<li>Cuadro: Lorem ipsum</li>
+<li>Frenos: Lorem ipsum</li>
+<li>Suispensión: Lorem ipsum</li>
+<li>Peso: Lorem ipsum</li>
+<li>Dimensiones: Lorem ipsum</li>
+</ul>

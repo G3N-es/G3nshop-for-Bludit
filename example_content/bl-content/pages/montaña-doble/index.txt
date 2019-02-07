@@ -1,0 +1,9 @@
+<p>Praesent congue arcu in neque faucibus, hendrerit auctor risus iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sit amet odio in risus facilisis congue eget a magna. Nullam accumsan efficitur viverra.</p>
+<h4>CARACTERÍSTICAS</h4>
+<ul>
+<li>Cuadro: Lorem ipsum</li>
+<li>Frenos: Lorem ipsum</li>
+<li>Suispensión: Lorem ipsum</li>
+<li>Peso: Lorem ipsum</li>
+<li>Dimensiones: Lorem ipsum</li>
+</ul>

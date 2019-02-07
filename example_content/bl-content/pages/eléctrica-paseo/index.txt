@@ -1,0 +1,9 @@
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla interdum tortor at consequat molestie. Vivamus vitae pretium mi. Phasellus bibendum enim lacus, eleifend egestas lectus lacinia et. Praesent consequat nunc a mauris egestas, in dignissim lacus maximus.</p>
+<h4>CARACTERÍSTICAS</h4>
+<ul>
+<li>Cuadro: Lorem ipsum</li>
+<li>Frenos: Lorem ipsum</li>
+<li>Suispensión: Lorem ipsum</li>
+<li>Peso: Lorem ipsum</li>
+<li>Dimensiones: Lorem ipsum</li>
+</ul>

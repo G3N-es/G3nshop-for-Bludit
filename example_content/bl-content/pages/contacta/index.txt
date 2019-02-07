@@ -1,0 +1,5 @@
+<h4>Dirección:</h4>
+<p>C/ Cualquiera De, SN, 0000, (Algún Lugar)</p>
+<hr>
+<p><input type="text" placeholder="Email"><br><textarea placeholder="Mensaje"></textarea></p>
+<p>[Enviar]</p>
