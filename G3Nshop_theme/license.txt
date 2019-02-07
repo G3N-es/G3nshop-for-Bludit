@@ -1,0 +1,14 @@
+G3Nshop_theme ported the theme Mediumish by WowThemes.net
+Include compatible options for G3Nshop_plugin (a Bludit online shop solution). 
+
+Template Name: G3Nshop_theme
+Copyright: G3N.es | Miguel lacha, http://g3n.es, G3N, España
+Version: 1.0.0
+License: MIT https://choosealicense.com/licenses/mit/
+
+Original Template:
++	Template Name: Mediumish
++	Copyright: WowThemes.net, https://www.wowthemes.net, WOW DEVELOPMENT, Bucharest
++	Version: 1.0.0
++	https://www.wowthemes.net/mediumish-free-bootstrap-4-0-html-template-medium-styled/
++	License https://www.wowthemes.net/freebies-license/
