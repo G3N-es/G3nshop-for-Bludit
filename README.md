@@ -1,4 +1,5 @@
-### [en]G3Nshop plugin + theme | Ecommerce solution for Bludit
+### [en]
+### G3Nshop plugin + theme | Ecommerce solution for Bludit
 
 **Installation:
 
@@ -7,7 +8,8 @@ Enter the Admin and configure the plugin.
 
 More info: http://g3n.es/g3nshop-tienda-on-line
 
-### [es]G3Nshop plugin + tema | Solución de tienda on-line para Bludit
+### [es]
+### G3Nshop plugin + tema | Solución de tienda on-line para Bludit
 
 **Instalación:
 
