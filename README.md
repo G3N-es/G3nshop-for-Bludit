@@ -32,7 +32,7 @@ Entra en el administrador de Bludit. Configura el plugin el tema.
 Precaución!!!: Esto borrará el contenido actual que pudieses tener en bludit.
 
 Si deseas testar la aplicación puedes usar la carpeta bl-contet para sustituir tu contenido por el contenido de ejemplo.
-Es util para instalaciones desde 0, o instalaciones con intención de desarrollo o testeo.
+Es útil para instalaciones desde 0, o instalaciones con intención de desarrollo o testeo.
 
 
 **Más info**:
