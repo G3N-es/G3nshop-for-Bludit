@@ -3,10 +3,20 @@
 
 **Installation**:
 
-Copy the folders in the root of your Bludit installation.
-Enter the Admin and configure the plugin.
+Copy the folder G3Nshop_plug in bl-plugins, and the folder G3Nshop_theme in bl-themes.
+Enter the Admin. Configure the plugin and the theme.
 
-More info: http://g3n.es/g3nshop-tienda-on-line
+**Example content**:
+
+Caution !!!:
+This erase the current content that you could have in bludit.
+
+If you want to test the application you can use the bl-contet folder to replace your content with the example content.
+It is useful for installations from 0, or installations with the intention of development or testing.
+
+**More info**:
+
+http://g3n.es/g3nshop-tienda-on-line
 
 ---
 
@@ -15,7 +25,16 @@ More info: http://g3n.es/g3nshop-tienda-on-line
 
 **Instalación**:
 
-Copia las carpetas en el raiz de tu instación de Bludit.
-Entra en el Admin y configura el plugin.
+Copia la carpeta G3Nshop_plug en bl-plugins, y la carpeta G3Nshop_theme en bl-themes.
+Entra en el administrador de Bludit. Configura el plugin el tema.
 
-Más info: http://g3n.es/g3nshop-tienda-on-line
+**Contenido de ejemplo**:
+Precaución!!!: Esto borrará el contenido actual que pudieses tener en bludit.
+
+Si deseas testar la aplicación puedes usar la carpeta bl-contet para sustituir tu contenido por el contenido de ejemplo.
+Es util para instalaciones desde 0, o instalaciones con intención de desarrollo o testeo.
+
+
+**Más info**:
+
+http://g3n.es/g3nshop-tienda-on-line
