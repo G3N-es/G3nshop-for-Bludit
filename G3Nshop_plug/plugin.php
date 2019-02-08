@@ -281,7 +281,7 @@ EOT;
 		
 		$("#pages-tab").parent().before(
 			'<li class="nav-item">'
-		+	'	<a class="nav-link active" id="$L_Producto-tab" data-toggle="tab" href="#pages" role="tab" aria-selected="true" >$L_Productos_Publicados</a>'
+		+	'	<a class="nav-link active" id="Producto-tab" data-toggle="tab" href="#pages" role="tab" aria-selected="true" >$L_Productos_Publicados</a>'
 		+	'</li>'
 		);
 		
