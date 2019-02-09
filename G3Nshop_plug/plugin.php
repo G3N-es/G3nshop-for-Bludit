@@ -156,6 +156,7 @@ class pluginG3Nshop extends Plugin {
 	</select>
 </div>
 <hr>
+<a title="G3Nshop Web" class="" href="http://g3n.es/g3nshop-tienda-on-line">G3Nshop Web</a>
 <a title="Dona" class="btn btn-warning" href="http://g3n.es/g3nshop-tienda-on-line">'.$L->get('donar').'</a>
 
 ';      
