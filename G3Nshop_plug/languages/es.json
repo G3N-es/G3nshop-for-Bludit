@@ -14,6 +14,7 @@
   "tallas" : "Tallas",
   "colores": "Colores",
   "separar-x-comas": "Separar por comas",
+  "colores-ejemplo": "Rojo, Verde, Azul",
   "buscar": "Búsqueda",
   "resultados": "resultados",
   "cuenta-paypal": "Cuenta de Paypal",
@@ -25,5 +26,5 @@
   "relacionados": "Relacionados",
   "busqueda": "Búsqueda",
   "agregar-carro": "Añadir al Carrito",
-  "donar":"Considere realizar un donativo, para poder continuar desarrollando este pluging GRATUITO"
+  "donar":"Considere realizar un donativo, para poder continuar desarrollando este pluging GRATUITO",
 }
