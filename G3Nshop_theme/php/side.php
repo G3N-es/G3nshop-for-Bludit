@@ -4,7 +4,7 @@
 
 			<div class="after-post-tags">
 				
-				<h4><?php echo $language->p('etiquetas'); ?></h4>
+				<h4><?php echo $language->p('tags'); ?></h4>
 				<div class="after-post-tags">
 					<ul class="tags">
 						<?php foreach ($etiquetasBlog as $tagKey=>$tagName): ?>
