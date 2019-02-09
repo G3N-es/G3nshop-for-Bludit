@@ -175,7 +175,8 @@ class pluginG3Nshop extends Plugin {
 		$L_Precio=$L->get('precio');
 		$L_Tallas=$L->get('tallas');
 		$L_Colores=$L->get('colores');
-		$L_Separar_por_comas=$L->get('separar-x-comas');	
+		$L_Separar_por_comas=$L->get('separar-x-comas');
+		$L_ColoresDeEjemplo=$L->get('colores-ejemplo');
 		$L_Buscar=$L->get('buscar');
 		$L_resultados=$L->get('resultados');
 			
@@ -255,7 +256,7 @@ EOT;
 		$("#jstitle").after(
 			'<small class="form-text">$L_Precio</small><input  type="number" placeholder="0,00" min="0"  step="0.01" id="precio" class="form-control mt-1" value="$precio" />'
 		+	'<small class="form-text">$L_Tallas ($L_Separar_por_comas)</small><input type="text" id="tallas" class="form-control mt-1" value="$tallas" placeholder="M, L, XL" />'
-		+	'<small class="form-text">$L_Colores ($L_Separar_por_comas)</small><input type="text" id="colores" class="form-control mt-1" value="$colores" placeholder="Rojo, Verde, Azul"/>'
+		+	'<small class="form-text">$L_Colores ($L_Separar_por_comas)</small><input type="text" id="colores" class="form-control mt-1" value="$colores" placeholder="$L_ColoresDeEjemplo"/>'
 		);
 EOT;
 			if(isset($_GET['producto'])){
