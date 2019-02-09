@@ -8,7 +8,7 @@ Enter the Admin. Configure the plugin and the theme.
 
 **Example content**:
 
-> Caution !!!:
+> Caution !!!
 > This erase the current content that you could have in bludit.
 
 If you want to test the application you can use the bl-contet folder to replace your content with the example content.
@@ -30,7 +30,7 @@ Entra en el administrador de Bludit. Configura el plugin el tema.
 
 **Contenido de ejemplo**:
 
-> Precaución!!!:
+> Precaución!!!
 > Esto borrará el contenido actual que pudieses tener en bludit.
 
 Si deseas testar la aplicación puedes usar la carpeta bl-contet para sustituir tu contenido por el contenido de ejemplo.
