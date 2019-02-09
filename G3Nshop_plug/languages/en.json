@@ -21,9 +21,9 @@
   "pruebas": "Test",
   "ventas": "Sales",
   "carrito": "Cart",
-  "precios": "Precios",
-  "relacionados": "Relacionados",
-  "busqueda": "Búsqueda",
+  "precios": "Prices",
+  "relacionados": "Related",
+  "busqueda": "Search",
   "agregar-carro": "Add to Cart",
   "donar":"Consider making a donation, to continue developing this FREE pluging"
 }
