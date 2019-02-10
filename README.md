@@ -1,10 +1,11 @@
 ### [en]
 ### G3Nshop plugin + theme | Ecommerce solution for Bludit
+PHP 7.1 or higher
 
 **Installation**:
 
 Copy the folder G3Nshop_plug in bl-plugins, and the folder G3Nshop_theme in bl-themes.
-Enter the Admin. Configure the plugin and the theme.
+Enter the Admin. Active the plugin and the theme. Configure the plugin.
 
 **Example content**:
 
@@ -22,11 +23,12 @@ http://g3n.es/g3nshop-tienda-on-line
 
 ### [es]
 ### G3Nshop plugin + tema | Solución de tienda on-line para Bludit
+PHP 7.1 or higher
 
 **Instalación**:
 
 Copia la carpeta G3Nshop_plug en bl-plugins, y la carpeta G3Nshop_theme en bl-themes.
-Entra en el administrador de Bludit. Configura el plugin el tema.
+Entra en el administrador de Bludit. Activa el plugin y el tema. Configura el plugin.
 
 **Contenido de ejemplo**:
 
