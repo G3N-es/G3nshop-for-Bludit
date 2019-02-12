@@ -75,7 +75,7 @@
 			<!-- End Tags -->
 			<!-- Begin Post Content -->
 			<div class="article-post">
-			
+				<?php if($precio !== "" && $precio !== "0" && $precio !== "0.00"){ ?>
 				<form class="formAgregarCarrito" action="<?php echo $urlPaypal; ?>" method="post">
 					<input type="hidden" name="cmd" value="_cart" />
 					<input type="hidden" name="add" value="1" />
@@ -111,9 +111,12 @@
 						</select>
 						</label>
 					<?php } ?>
+					
 					<input class="btn btn-success" type="submit" name="submit" value="<?php echo $language->p('agregar-carro'); ?>" />
+					
 				</form>
-			
+				<?php } ?>
+				
 				<?php echo $page->content(); ?>
 			</div>
 			<!-- End Post Content -->
