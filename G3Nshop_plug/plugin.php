@@ -156,7 +156,7 @@ class pluginG3Nshop extends Plugin {
 	</select>
 </div>
 <hr>
-<a title="G3Nshop Web" class="" href="http://g3n.es/g3nshop-tienda-on-line">G3Nshop Web</a>
+<a title="G3Nshop Web" class="" href="http://g3n.es/g3nshop-tienda-on-line">G3Nshop Web</a><hr>
 <a title="Dona" class="btn btn-warning" href="http://g3n.es/g3nshop-tienda-on-line">'.$L->get('donar').'</a>
 
 ';      
@@ -169,6 +169,8 @@ class pluginG3Nshop extends Plugin {
 		
 		global $L, $pages;
 		$urlEdicion=$_SERVER['REDIRECT_URL'];
+		$paginaAdmin= explode( "/", $urlEdicion);
+		$paginaAdmin= end($paginaAdmin);
 		
 		$L_Tienda=$L->get('tienda');
 		$L_Producto=$L->get('producto');
@@ -187,8 +189,7 @@ class pluginG3Nshop extends Plugin {
 		
 		if(stripos($urlEdicion, 'edit-content') !== false ){
 			$paginaEditar= explode( "/", $urlEdicion);
-			$paginaEditar= $paginaEditar[3];
-			
+			$paginaEditar= end($paginaEditar);
 			$pagina= new Page($paginaEditar);
 		
 			//Lo convertimos en array
@@ -209,14 +210,14 @@ class pluginG3Nshop extends Plugin {
 		$html.=<<<EOT
 <script>
 	$(document).ready(function(){
-		$("li > a[href='/admin/plugins']").after(
+		$("li > a[href*='/admin/plugins']").after(
 			'<li class="nav-item">'
 		+		'<a class="nav-link" href="/admin/configure-plugin/pluginG3Nshop?">- $L_Tienda</a>'
 		+	'</li>'
 		);
-		$("li > a[href='/admin/new-content']").after(
+		$("li > a[href*='/admin/new-content']").after(
 			'<li class="nav-item ml-3">'
-		+		'<a class="nav-link" href="/admin/new-content?producto"><span class="oi oi-plus"></span>$L_Producto</a>'
+		+		'<a class="nav-link" href="/admin/new-content?GS"><span class="oi oi-plus"></span>$L_Producto</a>'
 		+	'</li>'
 		);
 EOT;
@@ -250,7 +251,7 @@ EOT;
 			$etiquetasNormales= substr($etiquetasNormales, 0, -2);
 		}
 		
-		if($esEdicionProducto == 'loEs' || isset($_GET['producto'])){	
+		if($esEdicionProducto == 'loEs' || isset($_GET['GS'])){	
 			$categoriaTienda=$this->getValue('categoria');
 		$html.=<<<EOT
 
@@ -260,7 +261,7 @@ EOT;
 		+	'<small class="form-text">$L_Colores ($L_Separar_por_comas)</small><input type="text" id="colores" class="form-control mt-1" value="$colores" placeholder="$L_ColoresDeEjemplo"/>'
 		);
 EOT;
-			if(isset($_GET['producto'])){
+			if(isset($_GET['GS'])){
 		$html.=<<<EOT
 		$("#jscategory").parent().remove();
 		$("#jsdescription").after(
@@ -271,13 +272,23 @@ EOT;
 		$html.=<<<EOT
 		$("#jstags").val("$etiquetasNormales");
 		$("#jsbuttonSave").mouseup(function() {
-			var propiedadesProducto= 'P{'+$("#precio").val().replace(/ /g, "")+',T{'+$("#tallas").val().replace(/ /g, "").replace(/,/g, ",T{")+',C{'+$("#colores").val().replace(/ /g, "").replace(/,/g, ",C{")+','+$("#jstags").val();
+			var Precio = "";
+			var Tallas = "";
+			var Colores = "";
+			var Etiquetas= "";
+			
+			if( $("#precio").val() !== "" ) { Precio = 'P{'+$("#precio").val().replace(/ /g, ""); }
+			if( $("#tallas").val() !== "" ) { Tallas = ',T{'+$("#tallas").val().replace(/ /g, "").replace(/,/g, ",T{"); }
+			if( $("#colores").val() !== "" ){ Colores= ',C{'+$("#colores").val().replace(/ /g, "").replace(/,/g, ",C{"); }
+			if( $("#jstags").val() !== "" ) { Etiquetas= ','+$("#jstags").val(); }
+			
+			var propiedadesProducto= Precio+Tallas+Colores+Etiquetas;
 			$("#jstags").val(propiedadesProducto)
 		})
 EOT;
 	}
 			//Si estamos en contenido
-		if($urlEdicion ==='/admin/content'){
+		if( $paginaAdmin === 'content' ){
 			
 			$html.=<<<EOT
 		
