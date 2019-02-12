@@ -14,6 +14,7 @@ class pluginG3Nshop extends Plugin {
 	public function form() {
 		
 		global $L, $pages;
+		
 		if ($this->getValue('modoPruebas') === "1") {
 			$pruebasSeleccionado="selected";
 			$ventasSeleccionado="";
@@ -167,8 +168,10 @@ class pluginG3Nshop extends Plugin {
 	// Crea los elementos necesarios en el admin
 	public function adminBodyEnd() {
 		
-		global $L, $pages;
+		global $L, $pages, $site;
 		$urlEdicion=$_SERVER['REDIRECT_URL'];
+		$sitioURL= $site->url();
+		if (substr($sitioURL, -1) === "/"){ $sitioURL= substr($sitioURL,0,-1); }
 		$paginaAdmin= explode( "/", $urlEdicion);
 		$paginaAdmin= end($paginaAdmin);
 		
@@ -212,12 +215,12 @@ class pluginG3Nshop extends Plugin {
 	$(document).ready(function(){
 		$("li > a[href*='/admin/plugins']").after(
 			'<li class="nav-item">'
-		+		'<a class="nav-link" href="/admin/configure-plugin/pluginG3Nshop?">- $L_Tienda</a>'
+		+		'<a class="nav-link" href="$sitioURL/admin/configure-plugin/pluginG3Nshop?">- $L_Tienda</a>'
 		+	'</li>'
 		);
 		$("li > a[href*='/admin/new-content']").after(
 			'<li class="nav-item ml-3">'
-		+		'<a class="nav-link" href="/admin/new-content?GS"><span class="oi oi-plus"></span>$L_Producto</a>'
+		+		'<a class="nav-link" href="$sitioURL/admin/new-content?GS"><span class="oi oi-plus"></span>$L_Producto</a>'
 		+	'</li>'
 		);
 EOT;
@@ -337,8 +340,8 @@ EOT;
 				$etiquetas="· ".htmlentities(str_replace("{",": ",strtolower(implode(", ",$value['tags'])))).",";
 				
 				$html.=<<<EOT
-		$("a[href='/admin/edit-content/$key'].btn").parent().parent().addClass("producto");
-		$("a[href='/admin/edit-content/$key']").not(".btn").parent().append("<small>$etiquetas</small>");
+		$("a[href*='/admin/edit-content/$key'].btn").parent().parent().addClass("producto");
+		$("a[href*='/admin/edit-content/$key']").not(".btn").parent().append("<small>$etiquetas</small>");
 
 EOT;
 				}
