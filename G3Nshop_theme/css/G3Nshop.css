@@ -565,5 +565,5 @@ ul.tags li.oferta a{
 	color: #def;
 	font-size:1.5em;
 	font-weight: 700;
-	box-shadow: 0 10px 10px 5px rgba(0,0,0,.10);
+	box-shadow: 0px 10px 10px -10px rgba(0,0,0,.25);
 }
