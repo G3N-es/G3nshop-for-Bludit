@@ -22,7 +22,7 @@ http://g3n.es/g3nshop-tienda-on-line
 ---
 
 ### [es]
-### G3Nshop plugin + tema | Solución de tienda on-line para Bludit
+### G3Nshop plugin + tema | Solución de tienda on-line para Bludit 3.8
 PHP 7.1 or higher
 
 **Instalación**:
