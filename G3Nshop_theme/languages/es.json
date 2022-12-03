@@ -1,12 +1,13 @@
 {
 	"theme-data":
 	{
-		"name": "G3Nshop Theme",
+		"name": "G3Nshop",
 		"description": "Tema compatible con el plugin G3Nshop"
 	},
 
 	"no-pages-found": "No se han encontrado páginas",
-	"complete-the-description-of-the-article": "Complete la descripción del artículo."
-
-
+	"complete-the-description-of-the-article": "Complete la descripción del artículo.",
+	"pague-con": "Pague con",
+	"el-carrito-esta-vacio": "El carrito está vacío",
+	"filtros":"Filtros"
 }
