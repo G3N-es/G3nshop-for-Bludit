@@ -572,7 +572,10 @@ a img.nav-svg-icon {
 .nav.menu-arriba > li {
 	flex-grow: 1;
 }
-.nav.menu-arriba > li:last-child {
+.nav.menu-arriba > li.g3nshop {
+	border: 1px solid #0a6;
+}
+.nav.menu-arriba > li.nav-item.buscador {
 	flex-grow: 5 !important;
 }
 .nav.menu-arriba > li > a{
