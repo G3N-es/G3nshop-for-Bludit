@@ -17,7 +17,7 @@ Mediumish is a Bludit theme like Medium. Similar look and feel, Mediumish is the
 - Bludit v3.x
 
 ## Author
-- G3N.es | Miguel Lacha
+- G3N: Miguel Lacha
 
 ## License
 - Freebies, MIT License. https://www.wowthemes.net/freebies-license/
