@@ -1,7 +1,7 @@
 {
   "plugin-data":
   {
-    "name": "G3Nshop Plugin",
+    "name": "G3Nshop",
     "description": "Solución sencilla de comercio on-line para Bludit."
   },
   "categoria-tienda": "Categoría de la Tienda",
@@ -21,10 +21,12 @@
   "modo-paypal": "Modo Paypal",
   "pruebas": "Pruebas",
   "ventas": "Ventas",
+  "css-personalizado": "CSS Personalizado",
   "carrito": "Carrito",
   "precios": "Precios",
   "relacionados": "Relacionados",
   "busqueda": "Búsqueda",
   "agregar-carro": "Añadir al Carrito",
-  "donar":"Considere realizar un donativo, para poder continuar desarrollando este pluging GRATUITO"
+  "donar": "Continuar con el desarrollo de este plugin gratuito requiere de tu colaboración<h3>Considera realizar un donativo</h3>",
+  "otros":"Otros"
 }

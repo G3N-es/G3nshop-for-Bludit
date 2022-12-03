@@ -21,10 +21,12 @@
   "modo-paypal": "Paypal Mode",
   "pruebas": "Test",
   "ventas": "Sales",
+  "css-personalizado": "Custom CSS",
   "carrito": "Cart",
   "precios": "Prices",
   "relacionados": "Related",
   "busqueda": "Search",
   "agregar-carro": "Add to Cart",
-  "donar":"Consider making a donation, to continue developing this FREE pluging"
+  "donar": "Your support is needed to continue the development of this free plugin<h3>Consider making a donation</h3>",
+  "otros": "Other"
 }
