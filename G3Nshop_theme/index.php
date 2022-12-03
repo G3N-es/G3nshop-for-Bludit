@@ -7,11 +7,6 @@
 
 	<!-- Load Bludit Plugins: Site Body Begin -->
 	<?php Theme::plugins('siteBodyBegin'); ?>
-
-	<!-- Navbar -->
-	<?php include(THEME_DIR_PHP.'topbar.php'); ?>
-
-	<!-- Content -->
 	<?php
 		
 		if ($WHERE_AM_I == 'page') {
@@ -134,8 +129,13 @@
 			}
 			if($PageTemplate === "product" || $PageTemplate === "shop"){$getTienda="?GS";}else{$getTienda="";}
 		}	
-		include(THEME_DIR_PHP.$PageTemplate.'.php');
+		
 	?>
+	<!-- Navbar -->
+	<?php include(THEME_DIR_PHP.'topbar.php'); ?>
+
+	<!-- Content -->
+	<?php include(THEME_DIR_PHP.$PageTemplate.'.php'); ?>
 	
 	<!-- Footer -->
 	<?php include(THEME_DIR_PHP.'footer.php'); ?>
