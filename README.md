@@ -15,6 +15,10 @@ Enter the Admin. Active the plugin and the theme. Configure the plugin.
 If you want to test the application you can use the bl-contet folder to replace your content with the example content.
 It is useful for installations from 0, or installations with the intention of development or testing.
 
+### Consider making a donation
+Your support is needed to continue the development of this free plugin
+
+- [PayPal](https://www.paypal.me/g3nWebAPPs/)
 
 ---
 
@@ -34,3 +38,8 @@ Entra en el administrador de Bludit. Activa el plugin y el tema. Configura el pl
 
 Si deseas testar la aplicación puedes usar la carpeta bl-contet para sustituir tu contenido por el contenido de ejemplo.
 Es útil para instalaciones desde 0, o instalaciones con intención de desarrollo o testeo.
+
+### Considera realizar un donativo
+Continuar con el desarrollo de este plugin gratuito requiere de tu colaboración
+
+- [PayPal](https://www.paypal.me/g3nWebAPPs/)
