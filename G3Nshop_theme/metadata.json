@@ -1,10 +1,10 @@
 {
-	"author": "G3N.es | Miguel Lacha",
+	"author": "G3N.es",
 	"email": "",
-	"website": "http://g3n.es/g3nshop-tienda-on-line",
+	"website": "https://github.com/G3N-es/G3nshop-for-Bludit",
 	"version": "1.0",
-	"releaseDate": "2019-01-29",
+	"releaseDate": "2022-12-5",
 	"license": "Freebies",
-	"compatible": "3.6",
+	"compatible": "3.X",
 	"notes": ""
 }

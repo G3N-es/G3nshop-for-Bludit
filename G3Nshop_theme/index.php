@@ -144,7 +144,6 @@
 	<?php
 		// Include Jquery file from Bludit Core
 		echo Theme::jquery();
-
 		echo Theme::js('js/tether.min.js');
 
 		// Include javascript Bootstrap file from Bludit Core
@@ -159,8 +158,21 @@
 	<?php Theme::plugins('siteBodyEnd'); ?>
 	<?php if (pluginActivated('pluginG3Nshop')){ ?>
 	<script>
-        paypal.minicart.render();
+        paypal.minicart.render({
+        	action: '<?php echo $urlPaypal; ?>',
+        	//styles: '', (para incluir estilos propios)
+       		strings: {
+        		button: '<?php echo $language->p("pague-con"); ?> <img src="<?php echo Theme::src('img/'); ?>PP_logo_h_100x26.png" width="100" height="26" alt="PayPal" />',
+              	subtotal: 'Total:',
+              	empty: '<?php echo $language->p("el-carrito-esta-vacio"); ?>'
+    		}  
+        });
     </script>
+    <script>
+		$('#filtroOnOf').click(function(){
+			$('#caja-de-filtros').toggle('slow');;
+		});
+	</script>
 	<?php } ?>
 </body>
 </html>
