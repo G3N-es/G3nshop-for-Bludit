@@ -19,7 +19,7 @@
             <?php if(array_key_exists($catecoriaG3Nshop, $categories->db)){
 				$category = new Category($catecoriaG3Nshop);
 			?>
-			<li class="nav-item <?php echo (($url->slug()==$catecoriaG3Nshop) ? 'active' :'') ?>" >
+			<li class="nav-item g3nshop<?php echo (($url->slug()==$catecoriaG3Nshop) ? ' active' :'') ?>" >
 				<a title="<?php echo $category->description(); ?>" class="nav-link <?php $category->name(); ?>" href="<?php echo DOMAIN_CATEGORIES.$catecoriaG3Nshop; ?>"><?php echo $category->name(); ?></a>
 			</li>
 			<?php } ?>
