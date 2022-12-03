@@ -14,7 +14,7 @@
 		<?php include(THEME_DIR_PHP.'side-filters.php'); ?>
 		
 		<!-- Begin Post -->
-		<div class="col-md-9 col-md-offset-2 col-xs-12">
+		<div id="producto" class="col-md-9 col-md-offset-2 col-xs-12">
 
 			<!-- Load Bludit Plugins: Page Begin -->
 			<?php Theme::plugins('pageBegin'); ?>
@@ -39,29 +39,29 @@
 								if (strpos($tagName, "P{") !== false ){
 									$precio= number_format(substr(trim($tagName), 2), 2, '.', '');
 									$tagName= substr(trim($tagName), 2)." ".$moneda;
-									$liclass= 'precio';
+									$liclass= 'precio '.$tagKey;
 									
 								}
 								if (strpos($tagName, "T{") !== false ){
 									
 									$tagName= substr(trim($tagName), 2);
 									$arrayTallas[]=$tagName;
-									$liclass= 'talla';	
+									$liclass= 'talla '.$tagKey;	
 								}
 								if (strpos($tagName, "C{") !== false ){
 									
 									$tagName= substr(trim($tagName), 2);
 									$arrayColores[]=$tagName;
-									$liclass= 'producto-color-'.$tagName;
+									$liclass= 'color '.$tagKey;
 									$conTalla++;
 								}
 											
 							}else{
-								$liclass=$tagKey;
+								$liclass='generico '.$tagKey;
 							}
 							
 					?>
-					<li class="<?php echo $liclass ?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey.$getTienda ?>"><?php echo $tagName; ?></a></li>
+					<li class="<?php echo $liclass ?>" style="color:#f60"><?php echo $tagName; ?></li>
 					<?php endforeach;
 					if(count($arrayTallas) === 1){
 						$propiedadesProducto .= " ".$arrayTallas[0];
@@ -76,15 +76,17 @@
 			<!-- Begin Post Content -->
 			<div class="article-post">
 				<?php if($precio !== "" && $precio !== "0" && $precio !== "0.00"){ ?>
-				<form class="formAgregarCarrito" action="<?php echo $urlPaypal; ?>" method="post">
+				<form class="formAgregarCarrito" action="" method="post">
 					<input type="hidden" name="cmd" value="_cart" />
 					<input type="hidden" name="add" value="1" />
+                  	<input name="shopping_url" type="hidden" value="<?php echo $site->url(); ?>" />
+                    <input name="return" type="hidden" value="<?php echo $site->url(); ?>" />
 					<input type="hidden" name="business" value="<?php echo $cuentaPaypal; ?>" />
 					<input type="hidden" name="item_name" value="<?php echo $page->title().$propiedadesProducto; ?>" />
 					<input type="hidden" name="quantity" value="1" />
 					<input type="hidden" name="amount" value="<?php echo $precio; ?>" />
 					<input type="hidden" name="currency_code" value="<?php echo $moneda; ?>" />
-					<input type="hidden" name="shipping" value="1.00">
+                    <input type="hidden" name="shipping" value="0" />
 					<?php
 						$conTC=-1;
 						if(count($arrayTallas) > 1){

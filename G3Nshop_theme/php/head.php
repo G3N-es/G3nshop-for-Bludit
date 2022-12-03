@@ -14,11 +14,11 @@
 <!-- Include Bootstrap CSS file bootstrap.css -->
 <?php echo Theme::cssBootstrap(); ?>
 
-<!-- Include CSS Styles from this theme -->
-<?php echo Theme::css('css/G3Nshop.css'); ?>
+
 
 <link href="//fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+<!-- Include CSS Styles from this theme -->
+<?php echo Theme::css('css/G3Nshop.css'); ?>
 <!-- Load Bludit Plugins: Site head -->
 <?php Theme::plugins('siteHead'); ?>
