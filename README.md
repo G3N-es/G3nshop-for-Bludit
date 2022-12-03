@@ -4,8 +4,12 @@ PHP 7.1 o superior
 
 **Installation**:
 
-Copy the folder G3Nshop_plug in bl-plugins, and the folder G3Nshop_theme in bl-themes.
-Enter the Admin. Active the plugin and the theme. Configure the plugin.
+- Copy the folder G3Nshop_plug in bl-plugins, and the folder G3Nshop_theme in bl-themes.
+- Enter the Admin.
+- Active the plugin and the theme.
+- Create a category for the store.
+- Configure the plugin.
+- Important: Assign the category to the store before creating any product.
 
 **Example content**:
 
@@ -28,8 +32,12 @@ PHP 7.1 or higher
 
 **Instalación**:
 
-Copia la carpeta G3Nshop_plug en bl-plugins, y la carpeta G3Nshop_theme en bl-themes.
-Entra en el administrador de Bludit. Activa el plugin y el tema. Configura el plugin.
+- Copia la carpeta G3Nshop_plug en bl-plugins, y la carpeta G3Nshop_theme en bl-themes.
+- Entra en el administrador de Bludit.
+- Activa el plugin y el tema.
+- Crea una categoría para la tienda.
+- Configura el plugin.
+- Importante: Asignar la categoría a la tienda antes de crear ningún producto.
 
 **Contenido de ejemplo**:
 
