@@ -15,11 +15,20 @@
                 </a>
             </li>
             <!-- Categorias -->
-			<?php
-			foreach ($categories->db as $key=>$fields){ ?>
+            
+            <?php if(array_key_exists($catecoriaG3Nshop, $categories->db)){
+				$category = new Category($catecoriaG3Nshop);
+			?>
+			<li class="nav-item <?php echo (($url->slug()==$catecoriaG3Nshop) ? 'active' :'') ?>" >
+				<a title="<?php echo $category->description(); ?>" class="nav-link <?php $category->name(); ?>" href="<?php echo DOMAIN_CATEGORIES.$catecoriaG3Nshop; ?>"><?php echo $category->name(); ?></a>
+			</li>
+			<?php } ?>
+			<?php foreach ($categories->db as $key=>$fields){ ?>
+				<?php if ($key !== $catecoriaG3Nshop){ ?>
 			<li class="nav-item <?php echo (($url->slug()==$key) ? 'active' :'') ?>" >
 				<a title="<?php echo $fields['description']; ?>" class="nav-link <?php echo $fields['name']; ?>" href="<?php echo DOMAIN_CATEGORIES.$key; ?>"><?php echo $fields['name']; ?></a>
 			</li>
+				<?php } ?>
 			<?php } ?>
 			<?php if (pluginActivated('pluginSearch')): ?>
 			<li class="nav-item buscador">
