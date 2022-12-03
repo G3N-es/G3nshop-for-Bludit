@@ -17,12 +17,10 @@ It is useful for installations from 0, or installations with the intention of de
 
 **More info**:
 
-http://g3n.es/g3nshop-tienda-on-line
-
 ---
 
 ### [es]
-### G3Nshop plugin + tema | Solución de tienda on-line para Bludit 3.8
+### G3Nshop plugin + tema | Solución de tienda on-line para Bludit 3.X
 PHP 7.1 or higher
 
 **Instalación**:
@@ -41,4 +39,3 @@ Es útil para instalaciones desde 0, o instalaciones con intención de desarroll
 
 **Más info**:
 
-http://g3n.es/g3nshop-tienda-on-line
