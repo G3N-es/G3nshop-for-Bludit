@@ -1,5 +1,5 @@
 ### [en]
-### G3Nshop plugin + theme | Ecommerce solution for Bludit 3.8
+### G3Nshop plugin + theme | Ecommerce solution for Bludit 3.X
 PHP 7.1 o superior
 
 **Installation**:
