@@ -1,13 +1,122 @@
 <?php
+/* Para próximas versiones:
+ * 
+ * Vaciar style (el estilo por defecto del carrito) en el pie de index template
+ * Crear un nuevo estilo mas adaptable
+ * 
+ */
 class pluginG3Nshop extends Plugin {
 	
 	// Instalar plugin
 	public function init() {
 		$this->dbFields = array(
 		  'categoria'	=> '',
-		  'moneda' => '',
+		  'moneda' => 'EUR',
 		  'cuentaPaypal'	=> '',
-		  'modoPruebas' => '1'
+		  'modoPruebas' => '1',
+          'cssPersonalizado' => '
+/* Ofertas: Si quieres incluir ofertas, crea una etiqueta oferta y aplica el estilo  */
+/* Offers: If you want to include offers, create an offer tag and apply the style */
+.oferta a,  .offer a{
+  color: #ee0 !important;
+  background: #e00  !important;
+  border: 4px solid #ee0  !important;
+}
+.after-post-tags .oferta a, .after-post-tags .offer a {
+  position: absolute;
+  top: -8px;
+  right:-6px;
+  font-size: 1.3em;
+  box-shadow: 0px 5px 10px #00000055;
+  border-radius: 0px 0px 0px 10px !important;
+}
+.related .after-post-tags .oferta a, .related  .after-post-tags .offer a {
+  font-size: 0.9em;
+}
+
+ /* Colores personalizados para Productos. Si creas nuevos colores, este es el sitio para asignarlos */
+ /* Custom colors for Products. If you create new colors, this is the place to assign them */
+
+.c-negro a, .c-black a {
+  color: #fff !important;
+  background: #333 !important;
+}
+
+.c-gris a, .c-grey a {
+  color: #fff !important;
+  background: #777 !important;
+}
+
+.c-blanco a, .c-white a {
+  color:  #777 !important;
+  background: #fff !important;
+  border: 1px solid #aaa;
+}
+
+.c-cian a, .c-cyan a {
+  color:  #fff !important;
+  background: #1bc !important;
+}
+
+.c-magenta a {
+  color:  #fff !important;
+  background: #f08 !important;
+}
+
+.c-amarillo a, .c-yellow a {
+  color:  #000 !important;
+  background: #fd0 !important;
+}
+
+.c-rojo a, .c-red a {
+  color:  #fff !important;
+  background: #c00 !important;
+}
+
+.c-rosa a, .c-ping a {
+  color:  #fff !important;
+  background: #e89 !important;
+}
+
+.c-verde a, .c-green a {
+  color:  #fff !important;
+  background: #383 !important;
+}
+
+.c-azul a, .c-blue a {
+  color:  #fff !important;
+  background: #00c !important;
+}
+
+.c-morado a, .c-purple a {
+  color:  #fff !important;
+  background: #808 !important;
+}
+
+.c-naranja a, .c-orange a {
+  color:  #fff !important;
+  background: #f60 !important;
+}
+
+.c-marron a, .c-brown a {
+  color:  #fff !important;
+  background: #840 !important;
+}
+
+ /* Precios |  Prizes */
+.precio a {
+	color: #f60  !important;
+	background: transparent !important;
+	border: none !important;
+}
+
+ /* Tallas |  Sizes */
+.talla a {
+	border:1px dashed #aaa !important;
+	background: #fff !important;
+}
+             
+'
 		);
 	}
 	// Formulario de Configuración 
@@ -53,96 +162,96 @@ class pluginG3Nshop extends Plugin {
 	<select name="moneda">';
 		$html .='<option value="'.$this->getValue('moneda').'" selected>'.$this->getValue('moneda').'</option>';
 		$html .='
-		<option value="EUR">EUR - Euro</option>
-		<option value="USD">USD - Dólar americano</option>
-		<option value="AED">AED - Dirham de Emiratos Árabes Unidos</option>
-		<option value="ARS">ARS - Peso argentino</option>
-		<option value="AUD">AUD - Dólar australiano</option>
-		<option value="AWG">AWG - Florín arubeño</option>
-		<option value="BAM">BAM - Marco convertible</option>
-		<option value="BBD">BBD - Dólar de Barbados</option>
-		<option value="BDT">BDT - Taka bangladesí</option>
-		<option value="BGN">BGN - Lev Bulgaria</option>
-		<option value="BHD">BHD - Dinar bahreiní</option>
-		<option value="BMD">BMD - Dólar bermudeño</option>
-		<option value="BOB">BOB - Boliviano de Bolivia</option>
-		<option value="BRL">BRL - Real Brasileño</option>
-		<option value="BSD">BSD - Dólar bahameño</option>
-		<option value="CAD">CAD - Dólar canadiense</option>
-		<option value="CHF">CHF - Franco suizo</option>
-		<option value="CLP">CLP - Peso chileno</option>
-		<option value="CNY">CNY - Yuan Chino</option>
-		<option value="COP">COP - Peso colombiano</option>
-		<option value="CZK">CZK - Corona checa</option>
-		<option value="DKK">DKK - Corona danesa</option>
-		<option value="DOP">DOP - Peso dominicano</option>
-		<option value="EGP">EGP - Libra Egipcia</option>
-		<option value="FJD">FJD - Dólar fiyiano</option>
-		<option value="GBP">GBP - Libra esterlina</option>
-		<option value="GHS">GHS - Cedi de Ghana</option>
-		<option value="GMD">GMD - Dalasi de Gambia</option>
-		<option value="GTQ">GTQ - Quetzal de Guatemala</option>
-		<option value="HKD">HKD - Dólar de Hong Kong</option>
-		<option value="HRK">HRK - Kuna croata</option>
-		<option value="HUF">HUF - Florín húngaro</option>
-		<option value="IDR">IDR - Rupia Indonesia</option>
-		<option value="ILS">ILS - Shéquel israelí</option>
-		<option value="INR">INR - Rupia Hindú</option>
-		<option value="IRR">IRR - Rial iraní</option>
-		<option value="ISK">ISK - Corona islandesa</option>
-		<option value="JMD">JMD - Dólar Jamaiquino</option>
-		<option value="JOD">JOD - Dinar jordano</option>
-		<option value="JPY">JPY - Yen japonés</option>
-		<option value="KES">KES - Chelín Keniano</option>
-		<option value="KHR">KHR - Riel camboyano</option>
-		<option value="KRW">KRW - Won surcoreano</option>
-		<option value="KWD">KWD - Dinar kuwaití</option>
-		<option value="LAK">LAK - Kip laosiano</option>
-		<option value="LBP">LBP - Libra Libanesa</option>
-		<option value="LKR">LKR - Rupia Esrilanquesa</option>
-		<option value="MAD">MAD - Dirham de Marreucos</option>
-		<option value="MDL">MDL - Leu moldavo</option>
-		<option value="MGA">MGA - Ariary malgache</option>
-		<option value="MKD">MKD - Denar macedonio</option>
-		<option value="MUR">MUR - Rupia de Mauricio</option>
-		<option value="MVR">MVR - Rupia de Maldivas</option>
-		<option value="MXN">MXN - Peso mexicano</option>
-		<option value="MYR">MYR - Ringgit Malayo</option>
-		<option value="NAD">NAD - Dólar namibio</option>
-		<option value="NGN">NGN - Naira Nigeria</option>
-		<option value="NOK">NOK - Corona noruega</option>
-		<option value="NPR">NPR - Rupia nepalí</option>
-		<option value="NZD">NZD - Dólar neozelandés</option>
-		<option value="OMR">OMR - Rial omaní</option>
-		<option value="PAB">PAB - Balboa Panameño</option>
-		<option value="PEN">PEN - Sol Perú</option>
-		<option value="PHP">PHP - Peso filipino</option>
-		<option value="PKR">PKR - Rupia paquistaní</option>
-		<option value="PLN">PLN - Zloty Polaco</option>
-		<option value="PYG">PYG - Guaraní paraguayo</option>
-		<option value="QAR">QAR - Riyal Qatarí</option>
-		<option value="RON">RON - Leu Rumano</option>
-		<option value="RSD">RSD - Dinar serbio</option>
-		<option value="RUB">RUB - Rublo ruso</option>
-		<option value="SAR">SAR - Riyal Saudí</option>
-		<option value="SCR">SCR - Rupia de Seychelles</option>
-		<option value="SEK">SEK - Corona sueca</option>
-		<option value="SGD">SGD - Dólar de Singapur</option>
-		<option value="SYP">SYP - Libra siria</option>
-		<option value="THB">THB - Baht Thailandés</option>
-		<option value="TND">TND - Dinar tunecino</option>
-		<option value="TRY">TRY - Lira turca</option>
-		<option value="TWD">TWD - dólar taiwanés</option>
-		<option value="UAH">UAH - Grivna Ucrania</option>
-		<option value="UGX">UGX - Chelín ugandés</option>
-		<option value="UYU">UYU - Peso uruguayo</option>
-		<option value="VES">VES - Bolívar venezolano</option>
-		<option value="VND">VND - Dong vietnamita</option>
-		<option value="XAF">XAF - Franco CFA de África Central</option>
-		<option value="XCD">XCD - Dólar del Caribe Oriental</option>
-		<option value="XOF">XOF - Franco de África Occidental</option>
-		<option value="XPF">XPF - Franco CFP</option>
-		<option value="ZAR">ZAR - Rand sudafricano</option>
+		<option value="EUR">EUR</option>
+		<option value="USD">USD</option>
+		<option value="AED">AED</option>
+		<option value="ARS">ARS</option>
+		<option value="AUD">AUD</option>
+		<option value="AWG">AWG</option>
+		<option value="BAM">BAM</option>
+		<option value="BBD">BBD</option>
+		<option value="BDT">BDT</option>
+		<option value="BGN">BGN</option>
+		<option value="BHD">BHD</option>
+		<option value="BMD">BMD</option>
+		<option value="BOB">BOB</option>
+		<option value="BRL">BRL</option>
+		<option value="BSD">BSD</option>
+		<option value="CAD">CAD</option>
+		<option value="CHF">CHF</option>
+		<option value="CLP">CLP</option>
+		<option value="CNY">CNY</option>
+		<option value="COP">COP</option>
+		<option value="CZK">CZK</option>
+		<option value="DKK">DKK</option>
+		<option value="DOP">DOP</option>
+		<option value="EGP">EGP</option>
+		<option value="FJD">FJD</option>
+		<option value="GBP">GBP</option>
+		<option value="GHS">GHS</option>
+		<option value="GMD">GMD</option>
+		<option value="GTQ">GTQ</option>
+		<option value="HKD">HKD</option>
+		<option value="HRK">HRK</option>
+		<option value="HUF">HUF</option>
+		<option value="IDR">IDR</option>
+		<option value="ILS">ILS</option>
+		<option value="INR">INR</option>
+		<option value="IRR">IRR</option>
+		<option value="ISK">ISK</option>
+		<option value="JMD">JMD</option>
+		<option value="JOD">JOD</option>
+		<option value="JPY">JPY</option>
+		<option value="KES">KES</option>
+		<option value="KHR">KHR</option>
+		<option value="KRW">KRW</option>
+		<option value="KWD">KWD</option>
+		<option value="LAK">LAK</option>
+		<option value="LBP">LBP</option>
+		<option value="LKR">LKR</option>
+		<option value="MAD">MAD</option>
+		<option value="MDL">MDL</option>
+		<option value="MGA">MGA</option>
+		<option value="MKD">MKD</option>
+		<option value="MUR">MUR</option>
+		<option value="MVR">MVR</option>
+		<option value="MXN">MXN</option>
+		<option value="MYR">MYR</option>
+		<option value="NAD">NAD</option>
+		<option value="NGN">NGN</option>
+		<option value="NOK">NOK</option>
+		<option value="NPR">NPR</option>
+		<option value="NZD">NZD</option>
+		<option value="OMR">OMR</option>
+		<option value="PAB">PAB</option>
+		<option value="PEN">PEN</option>
+		<option value="PHP">PHP</option>
+		<option value="PKR">PKR</option>
+		<option value="PLN">PLN</option>
+		<option value="PYG">PYG</option>
+		<option value="QAR">QAR</option>
+		<option value="RON">RON</option>
+		<option value="RSD">RSD</option>
+		<option value="RUB">RUB</option>
+		<option value="SAR">SAR</option>
+		<option value="SCR">SCR</option>
+		<option value="SEK">SEK</option>
+		<option value="SGD">SGD</option>
+		<option value="SYP">SYP</option>
+		<option value="THB">THB</option>
+		<option value="TND">TND</option>
+		<option value="TRY">TRY</option>
+		<option value="TWD">TWD</option>
+		<option value="UAH">UAH</option>
+		<option value="UGX">UGX</option>
+		<option value="UYU">UYU</option>
+		<option value="VES">VES</option>
+		<option value="VND">VND</option>
+		<option value="XAF">XA</option>
+		<option value="XCD">XCD</option>
+		<option value="XOF">XOF</option>
+		<option value="XPF">XPF</option>
+		<option value="ZAR">ZAR</option>
 	</select>
 </div>
 <div>
@@ -156,16 +265,42 @@ class pluginG3Nshop extends Plugin {
 		<option value="2" '.$ventasSeleccionado.'>'.$L->get('ventas').'</option>
 	</select>
 </div>
+<div>
+	<label>'.$L->get('css-personalizado').'</label>
+	<textarea name="cssPersonalizado">'.$this->getValue('cssPersonalizado').'</textarea>
+</div>
 <hr>
-<a title="G3Nshop Web" class="" href="http://g3n.es/g3nshop-tienda-on-line">G3Nshop Web</a><hr>
-<a title="Dona" class="btn btn-warning" href="http://g3n.es/g3nshop-tienda-on-line">'.$L->get('donar').'</a>
-
+<div id="donar">
+	<div id="texto">'.$L->get('donar').'</div>
+	<ul>
+		<li id="primero">
+			<a target="black" href="https://PayPal.Me/g3nWebAPPs/10">10€</a>
+		</li>
+		<li id="segundo">
+			<a target="black" href="https://PayPal.Me/g3nWebAPPs/20">20€</a>
+		</li>
+		<li id="tercero">
+			<a target="black" href="https://PayPal.Me/g3nWebAPPs/40">40€</a>
+		</li>
+		<li id="cuarto">
+			<a target="black" href="https://PayPal.Me/g3nWebAPPs/">'.$L->get('otros').'</a>
+		</li>
+	</ul>
+</div>
+<br>
 ';      
 		return $html;
 	} // Fin form()
 	
 
 	// Crea los elementos necesarios en el admin
+  	public function adminSidebar() {
+    echo '
+      <li class="nav-item">
+      	<a class="nav-link" href="/admin/configure-plugin/pluginG3Nshop"><span class="fa fa-shopping-cart"></span>G3Nshop</a>
+      </li>
+';	
+    }
 	public function adminBodyEnd() {
 		
 		global $L, $pages, $site;
@@ -174,7 +309,8 @@ class pluginG3Nshop extends Plugin {
 		if (substr($sitioURL, -1) === "/"){ $sitioURL= substr($sitioURL,0,-1); }
 		$paginaAdmin= explode( "/", $urlEdicion);
 		$paginaAdmin= end($paginaAdmin);
-		
+		$categoriaDeTienda= $this->getValue('categoria');
+      
 		$L_Tienda=$L->get('tienda');
 		$L_Producto=$L->get('producto');
 		$L_Productos_Publicados=$L->get('productos-publicados');
@@ -187,9 +323,50 @@ class pluginG3Nshop extends Plugin {
 		$L_resultados=$L->get('resultados');
 			
 		// capturamos datos que nos son necesarios
-		// Si es editar
+		// Si es configure-plugin/pluginG3Nshop
+		if(stripos($urlEdicion, 'configure-plugin/pluginG3Nshop') !== false ){
+        echo '
+<style>
+#donar {
+  border: 5px solid  #fd0;
+  margin: 0 0 100px 0;
+  background-image: linear-gradient(#fd8, #ffc);
+}
+#donar #texto{
+  padding: 20px;
+  font-size: 1.2em;
+  text-align: center;
+  background-image: linear-gradient(#ffffffaa, #ffffff55);
+}
+#donar ul{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 45px 0 60px 0;
+}
+#donar li{
+  list-style: none;
+}
+#donar li a{
+  color: #00000099;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px;
+  margin: 10px;
+  background: #fe0;
+  box-shadow: 0px 5px 10px #00000055;
+  border: 1px solid #eee;
+  border-radius: 10px !important;
+  }
+  #donar li a:hover{
+  filter: brightness(1.2);
+  box-shadow: 5px 10px 20px #00000055;
+}
 
-		
+</style>
+';
+        }
+		// Si es editar
 		if(stripos($urlEdicion, 'edit-content') !== false ){
 			$paginaEditar= explode( "/", $urlEdicion);
 			$paginaEditar= end($paginaEditar);
@@ -204,7 +381,7 @@ class pluginG3Nshop extends Plugin {
 				}
 			}
 				
-			if ($propiedadesPagina['category'] == $this->getValue('categoria')){
+			if ($propiedadesPagina['category'] == $categoriaDeTienda){
 				$esEdicionProducto= 'loEs';
 			}
 		}
@@ -213,14 +390,9 @@ class pluginG3Nshop extends Plugin {
 		$html.=<<<EOT
 <script>
 	$(document).ready(function(){
-		$("li > a[href*='/admin/plugins']").after(
-			'<li class="nav-item">'
-		+		'<a class="nav-link" href="$sitioURL/admin/configure-plugin/pluginG3Nshop?">- $L_Tienda</a>'
-		+	'</li>'
-		);
 		$("li > a[href*='/admin/new-content']").after(
 			'<li class="nav-item ml-3">'
-		+		'<a class="nav-link" href="$sitioURL/admin/new-content?GS"><span class="oi oi-plus"></span>$L_Producto</a>'
+		+		'<a class="nav-link" href="$sitioURL/admin/new-content?GS"><span style="color: #0078D4;" class="fa fa-plus-circle"></span><span class="fa fa-shopping-cart"></span>$L_Producto</a>'
 		+	'</li>'
 		);
 EOT;
@@ -243,6 +415,7 @@ EOT;
 					}
 					if (strpos($valores, "C{") !== false ){
 						$colores.= substr(trim($valores), 2).", ";
+                      	$arrayColores[]=substr(trim($valores), 2);
 					}
 				}else{
 				  $etiquetasNormales .= $valores.", ";
@@ -253,53 +426,48 @@ EOT;
 			$colores= substr($colores, 0, -2);
 			$etiquetasNormales= substr($etiquetasNormales, 0, -2);
 		}
-		
+		$verArrayColores= implode(" ", $arrayColores);
 		if($esEdicionProducto == 'loEs' || isset($_GET['GS'])){	
 			$categoriaTienda=$this->getValue('categoria');
-		$html.=<<<EOT
+          $html.=<<<EOT
+          $("#jscategory").parent().remove();
+          $("#jstypeSelector").parent().hide();
+          $("#jsdescription").after(
+              '<input  type="hidden" id="jscategory" name="category" value="$categoriaTienda" />'
+          );
+          $("#jstitle").after(
+              '<small class="form-text">$L_Precio</small><input  type="number" placeholder="0,00" min="0"  step="0.01" id="precio" class="form-control mt-1" value="$precio" />'
+          +	'<small class="form-text">$L_Tallas ($L_Separar_por_comas)</small><input type="text" id="tallas" class="form-control mt-1" value="$tallas" placeholder="M, L, XL" />'
+          +	'<small class="form-text">$L_Colores ($L_Separar_por_comas)</small><input type="text" id="colores" class="form-control mt-1" value="$colores" placeholder="$L_ColoresDeEjemplo"/><br>'
+          );
 
-		$("#jstitle").after(
-			'<small class="form-text">$L_Precio</small><input  type="number" placeholder="0,00" min="0"  step="0.01" id="precio" class="form-control mt-1" value="$precio" />'
-		+	'<small class="form-text">$L_Tallas ($L_Separar_por_comas)</small><input type="text" id="tallas" class="form-control mt-1" value="$tallas" placeholder="M, L, XL" />'
-		+	'<small class="form-text">$L_Colores ($L_Separar_por_comas)</small><input type="text" id="colores" class="form-control mt-1" value="$colores" placeholder="$L_ColoresDeEjemplo"/>'
-		);
+          $("#jstags").val("$etiquetasNormales");
+          $("#jsbuttonSave").mouseup(function() {
+              var Precio = "";
+              var Tallas = "";
+              var Colores = "";
+              var Etiquetas= "";
+
+              if( $("#precio").val() !== "" ) { Precio = 'P{'+$("#precio").val().replace(/ /g, ""); }
+              if( $("#tallas").val() !== "" ) { Tallas = ',T{'+$("#tallas").val().replace(/ /g, "").replace(/,/g, ",T{"); }
+              if( $("#colores").val() !== "" ){ Colores= ',C{'+$("#colores").val().replace(/ /g, "").replace(/,/g, ",C{"); }
+              if( $("#jstags").val() !== "" ) { Etiquetas= ','+$("#jstags").val(); }
+
+              var propiedadesProducto= Precio+Tallas+Colores+Etiquetas;
+              $("#jstags").val(propiedadesProducto)
+          })
 EOT;
-			if(isset($_GET['GS'])){
-		$html.=<<<EOT
-		$("#jscategory").parent().remove();
-		$("#jsdescription").after(
-			'<input  type="hidden" id="jscategory" name="category" value="$categoriaTienda" />'
-		);
-EOT;
-			}
-		$html.=<<<EOT
-		$("#jstags").val("$etiquetasNormales");
-		$("#jsbuttonSave").mouseup(function() {
-			var Precio = "";
-			var Tallas = "";
-			var Colores = "";
-			var Etiquetas= "";
-			
-			if( $("#precio").val() !== "" ) { Precio = 'P{'+$("#precio").val().replace(/ /g, ""); }
-			if( $("#tallas").val() !== "" ) { Tallas = ',T{'+$("#tallas").val().replace(/ /g, "").replace(/,/g, ",T{"); }
-			if( $("#colores").val() !== "" ){ Colores= ',C{'+$("#colores").val().replace(/ /g, "").replace(/,/g, ",C{"); }
-			if( $("#jstags").val() !== "" ) { Etiquetas= ','+$("#jstags").val(); }
-			
-			var propiedadesProducto= Precio+Tallas+Colores+Etiquetas;
-			$("#jstags").val(propiedadesProducto)
-		})
-EOT;
-	}
-			//Si estamos en contenido
+        //Sino es una publicación normal y hay que borrar la opción categoria de tienda
+		}else{
+          $html.=<<<EOT
+            $('#jscategory option[value="$categoriaDeTienda"]').hide();
+ EOT;         
+        }
+		//Si estamos en contenido
 		if( $paginaAdmin === 'content' ){
 			
 			$html.=<<<EOT
 		
-		$("#pages-tab").parent().before(
-			'<li class="nav-item">'
-		+	'	<a class="nav-link active" id="Producto-tab" data-toggle="tab" href="#pages" role="tab" aria-selected="true" >$L_Productos_Publicados</a>'
-		+	'</li>'
-		);
 		
 		$("ul.nav.nav-tabs").after(
 			'<div id="contenedor-form-busqueda" class="row mt-4">'
@@ -309,67 +477,56 @@ EOT;
 		+	'		<button id="btn-filtrar" class="btn btn-primary" type="button">$L_Buscar</button>'
 		+	'	  </span>'
 		+	'	  <input id="busqueda" type="text" class="form-control">'
+        +	'		<div id="borrarBusqueda" class="input-group-append">'
+		+	'	  		<button style="color: #fff" class="btn btn-outline-secondary btn-danger" type="button"><span class="fa fa-times-circle"></span></button>'
+		+	'		</div>'
 		+	'	</div>'
+
 		+	'  </div>'
 		+	'</div>'
 		);
-		
-		$("#btn-filtrar").click(function() {
-			
+		    
+		$("#btn-filtrar").click(function() {			
 			var busqueda= $("#busqueda").val().toLowerCase().trim();
 			if(busqueda !== ""){
-				$("#filtro-busqueda").remove();
-				
 				$("tbody tr").css("background-color", "transparent");
-				var resultadosVisibles=$("tbody tr:contains('"+ busqueda +"')" ).css("background-color", "#ddffcc").length;
-				var resultado="secondary";
-				if (resultadosVisibles === 0 ){resultado="danger";}
-				$("#contenedor-form-busqueda").after(
-				'<div id="filtro-busqueda" style="display: none" class="alert alert-'+resultado+' mt-1">'+$("#busqueda").val()+': '+resultadosVisibles+' $L_resultados</div>'
-				);
-				
-				$("#busqueda").val("");
-				$("#filtro-busqueda").show("slow");
-
-			}
+              	$("tbody tr").hide();
+				$("tbody tr:contains('"+ busqueda +"')" ).css("background-color", "#ddffcc");
+                $("tbody tr:contains('"+ busqueda +"')" ).show("slow");
+              	if($("tbody tr:contains('"+ busqueda +"')" ).length == 0) {
+                  	$(".resultado0").remove();
+                	$("thead" ).hide();
+                  	$(".tab-content").after('<p class="mt-4 text-muted resultado0">0 $L_resultados</p>');
+                }
+			}else{
+                $("tbody tr:contains('"+ busqueda +"')" ).show("slow");
+              	$("tbody tr").css("background-color", "transparent");
+              	$("thead" );
+            }
 		});		
 EOT;
 			foreach ($pages->db as $key => $value){
+              	$titulo= strtolower($value['title']);
+              	$html.=<<<EOT
+              $("div > a[href='/admin/edit-content/$key']").prepend("<span style='display:none' >$titulo</span>");
+EOT; 
 				if($value['category'] === $this->getValue('categoria') ){
-				$titulo=$value['title'];
-				$etiquetas="· ".htmlentities(str_replace("{",": ",strtolower(implode(", ",$value['tags'])))).",";
-				
+				$etiquetas= htmlentities(str_replace("{",": ",strtolower(implode(", ",$value['tags'])))).",";
+				$etiquetaProducto= strtolower($L_Producto);
 				$html.=<<<EOT
-		$("a[href*='/admin/edit-content/$key'].btn").parent().parent().addClass("producto");
-		$("a[href*='/admin/edit-content/$key']").not(".btn").parent().append("<small>$etiquetas</small>");
-
-EOT;
+		$("div > a[href='/admin/edit-content/$key']").prepend("<sup class='fa fa-shopping-cart'></sup>");
+		$("div > a[href='/admin/edit-content/$key']").parent().append("<br><small style='text-transform: capitalize'>$etiquetaProducto: $etiquetas</small>");
+EOT; 
 				}
 			}
 			$html.=<<<EOT
-			$("#pages-tab").removeClass("active");
-			$(".tab-content tbody tr").not(".producto").hide();
-			
-			$("#pages-tab").click(function() {
-			  $("tbody tr.producto").hide();
-			  $("tbody tr").not(".producto").show();
-			});
-			$("#Producto-tab").click(function() {	
-				$("tbody tr").show();
-				$("tbody tr").not(".producto").hide();				
-			});
-			$("#draft-tab, #sticky-tab, #scheduled-tab, #static-tab").click(function() {
-				$("tbody tr").show();
-			});
-			$("a[role='tab']").click(function() {
-				$("#form-busqueda").hide("slow");
-				$("#form-busqueda").show("slow");
-				$("#filtro-busqueda").remove();
+			$("a[role='tab']").add("#borrarBusqueda > button").click(function() {
+              	$(".resultado0").remove();
+              	$("#busqueda").val("");
+              	$("tbody tr").show();
 				$("tbody tr").css("background-color", "transparent");
 			});
-			
-			
-			
+		
 			
 EOT;
 		}
@@ -379,11 +536,13 @@ EOT;
 </script>
 EOT;
 
-		return $html;
-		
+		return $html;		
 		
 	}
-	
+    public function siteHead() {
+      echo "<style>".$this->getValue('cssPersonalizado')."</style>";
+      
+    }
 	
 	
 }
