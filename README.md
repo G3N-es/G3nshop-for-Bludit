@@ -5,8 +5,8 @@
 **Installation**:
 
 - Copy the folder G3Nshop_plug in bl-plugins, and the folder G3Nshop_theme in bl-themes.
-- Create a category for the store.
 - Enter the Admin.
+- Create a category for the store.
 - Active the theme and the plugin.
 - Configure the plugin.
 - Important: Assign the category to the store before creating any product.
