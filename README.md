@@ -1,6 +1,6 @@
 ### [en]
 ### G3Nshop plugin + theme | Ecommerce solution for Bludit 3.X
-PHP 7.1 o superior
+[Demo "Front end"][https://css-proyectos.x10.bz/]
 
 **Installation**:
 
@@ -28,7 +28,7 @@ Your support is needed to continue the development of this free plugin
 
 ### [es]
 ### G3Nshop plugin + tema | Solución de tienda on-line para Bludit 3.X
-PHP 7.1 or higher
+[Demo "Vista Cliente"][https://css-proyectos.x10.bz/]
 
 **Instalación**:
 
