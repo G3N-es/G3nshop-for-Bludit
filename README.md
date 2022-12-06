@@ -1,6 +1,6 @@
 ### [en]
 ### G3Nshop plugin + theme | Ecommerce solution for Bludit 3.X
-[Demo Front end](https://css-proyectos.x10.bz/)
+[Demo Front End](https://css-proyectos.x10.bz/)
 
 **Installation**:
 
