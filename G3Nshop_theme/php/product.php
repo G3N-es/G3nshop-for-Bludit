@@ -6,8 +6,7 @@
 			<h2><span>
 					<a href="<?php echo DOMAIN_CATEGORIES.$catecoriaG3Nshop; ?>">
 						<?php echo $NcategoriaG3Nshop; ?>
-					</a>
-				<?php echo "/".$url->slug();  ?>	
+					</a>	
 				</span>
 			</h2>
 		</div>

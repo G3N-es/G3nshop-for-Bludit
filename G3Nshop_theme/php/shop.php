@@ -13,9 +13,9 @@
 				<?php if ($WHERE_AM_I=='tag') {
 					if ((strpos($url->slug(), "p-") !== false) || (strpos($url->slug(), "c-") !== false) || (strpos($url->slug(), "t-") !== false) ){
 						if(strpos($url->slug(), "p-") !== false){ $tipoMoneda=" ".$moneda;}
-						echo "/".substr($url->slug(), 2).$tipoMoneda;
+						echo "/".ucwords(substr($url->slug(), 2)).$tipoMoneda;
 					}else{
-					echo "/".$url->slug();
+					echo "/".ucwords($url->slug());
 					}
 				} ?>	
 				</span>
