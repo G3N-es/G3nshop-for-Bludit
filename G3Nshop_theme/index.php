@@ -159,7 +159,7 @@
 	<?php if (pluginActivated('pluginG3Nshop')){ ?>
 	<script>
         paypal.minicart.render({
-        	action: 'https://css-proyectos.x10.bz/demo.html',
+        	action: '<?php echo $urlPaypal; ?>',
         	//styles: '', (para incluir estilos propios)
        		strings: {
         		button: '<?php echo $language->p("pague-con"); ?> <img src="<?php echo Theme::src('img/'); ?>PP_logo_h_100x26.png" width="100" height="26" alt="PayPal" />',
@@ -174,6 +174,5 @@
 		});
 	</script>
 	<?php } ?>
-  <div id="g3nshopdemo">G3Nshop DEMO<div>
 </body>
 </html>
