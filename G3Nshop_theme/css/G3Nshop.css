@@ -597,17 +597,3 @@ a img.nav-svg-icon {
 	color: red !important;
 	font-weight: bold;
 }
-.nav-item { margin: 0 20px }
-#g3nshopdemo {
-	position: fixed;
-  	bottom: 0;
-  	left: 0;
-  	width: 100%;
-  	background: red;
-  	font-size: 1.8em;
-  	color: #fff;
-  	height: 70px;
-  	text-align: center;
-  	padding: 12px 0 20px 0;
-  	box-shadow: 0 -10px 40px #33333355;
-}
