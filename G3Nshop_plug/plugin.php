@@ -295,9 +295,12 @@ class pluginG3Nshop extends Plugin {
 
 	// Crea los elementos necesarios en el admin
   	public function adminSidebar() {
+	global $site;	
+	$sitioURL= $site->url();
+	if (substr($sitioURL, -1) === "/"){ $sitioURL= substr($sitioURL,0,-1); }
     echo '
       <li class="nav-item">
-      	<a class="nav-link" href="/admin/configure-plugin/pluginG3Nshop"><span class="fa fa-shopping-cart"></span>G3Nshop</a>
+      	<a class="nav-link" href="'.$sitioURL.'/admin/configure-plugin/pluginG3Nshop"><span class="fa fa-shopping-cart"></span>G3Nshop</a>
       </li>
 ';	
     }
