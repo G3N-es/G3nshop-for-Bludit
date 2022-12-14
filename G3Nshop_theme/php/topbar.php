@@ -11,7 +11,7 @@
 		<ul class="nav menu-arriba">		
 			<li class="nav-item">
                 <a class="navbar-brand" href="<?php echo $site->url(); ?>">
-                    <img src="<?php echo Theme::src('img/logo.png'); ?>" title="Volver a Portada G3N.es | TecnoCreaciones + Marketing y Comunicación" alt="G3N.es | Diseño Web | Desarrollo APP">
+                    <img src="<?php echo Theme::src('img/logo.png'); ?>" title="Home" alt="Home">
                 </a>
             </li>
             <!-- Categorias -->
