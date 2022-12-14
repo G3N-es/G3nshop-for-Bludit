@@ -383,9 +383,6 @@ blockquote {
     .mediumnavigation .form-control {
       margin: 0;
     }
-    body {
-		padding-top:140px;
-	}
 }
 .share,.share a {
 	color:rgba(0,0,0,.44);
@@ -554,7 +551,7 @@ a img.nav-svg-icon {
 }
 
 .nav-link {
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 0rem;
 }
 .filtros {
 	padding: 1em;
@@ -567,7 +564,8 @@ a img.nav-svg-icon {
 .nav.menu-arriba {
 	width: 100%;
 	padding: 0 1em;
-    display: flex;	
+    display: flex;
+	flex-wrap: nowrap;
 	align-items: center;
 }
 .nav.menu-arriba > li {
@@ -640,22 +638,21 @@ a img.nav-svg-icon {
     display: none;
     position: fixed;
     left: 0;
-    top: 135px;
+    top: 105px;
 	width: 100vw;
 	height:10px;
 }
 
 #PPMiniCart form {
     position: relative;
-    width: 320px;
-    max-height: 400px;
+    width: 319px;
 	margin: 0 auto;
-    padding: 0 0 40px 8px;
+    padding: 8px;
     background: #fbfbfb;
     border: 1px solid #d7d7d7;
     border-radius: 4px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    font: 15px/normal arial, helvetica;
+    font: 14px/normal arial, helvetica;
     color: #333;
 }
 
@@ -666,16 +663,18 @@ a img.nav-svg-icon {
 }
 
 #PPMiniCart ul {
-    clear: both;
-    float: left;
-    width: 300px;
-    margin: 0 0 40px;
-    padding: 10px;
-    list-style-type: none;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      clear: both;
+	  float: left;
+	  width: 100%;
+	  max-height: 340px;
+	  overflow: scroll;
+	  margin: 0 0 4px;
+	  padding: 10px;
+	  list-style-type: none;
+	  background: #fff;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 #PPMiniCart .minicart-empty ul {
@@ -711,7 +710,8 @@ a img.nav-svg-icon {
 
 #PPMiniCart .minicart-details-name {
     float: left;
-    width: 40%;
+    width: 30%;
+	padding: 0 5px 0 0;
 }
 
 #PPMiniCart .minicart-details-quantity {
@@ -726,7 +726,7 @@ a img.nav-svg-icon {
 
 #PPMiniCart .minicart-details-price {
     float: left;
-    width: 30%;
+    width: 48%;
     text-align: right;
 }
 
@@ -755,9 +755,9 @@ a img.nav-svg-icon {
 }
 
 #PPMiniCart .minicart-quantity {
-    width: 30px;
-    height: 18px;
-    padding: 2px 4px;
+	width: 30px;
+	height: 22px;
+	padding: 4px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -781,8 +781,8 @@ a img.nav-svg-icon {
 
 #PPMiniCart .minicart-remove {
     width: 18px;
-    height: 19px;
-    margin: 2px 0 0;
+    height: 18px;
+    margin: 2px 0 0 5px;
     padding: 0;
     background: #b7b7b7;
     border: 1px solid #a3a3a3;
@@ -802,16 +802,16 @@ a img.nav-svg-icon {
 }
 
 #PPMiniCart .minicart-subtotal {
-position: absolute;
-bottom: 50px;
-left: 100px;
-font-size: 16px;
-font-weight: bold;
+	position: relative;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 #PPMiniCart .minicart-submit {
-	position: absolute;
-	left:55px;
+	position: relative;
+	width: 300px;
     height: 33px;
     padding: 0 9px;
     border: 1px solid #ffc727;
