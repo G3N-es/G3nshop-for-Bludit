@@ -7,15 +7,12 @@
 		
 		<div class="section-title col-12">
 			<h2><span>
-					<a href="<?php echo DOMAIN_CATEGORIES.$catecoriaG3Nshop; ?>">
-						<?php echo $NcategoriaG3Nshop; ?>
-					</a>
-				<?php if ($WHERE_AM_I=='tag') {
+					<a href="<?php echo DOMAIN_CATEGORIES.$catecoriaG3Nshop; ?>"><?php echo $NcategoriaG3Nshop; ?></a><?php if ($WHERE_AM_I=='tag') {
 					if ((strpos($url->slug(), "p-") !== false) || (strpos($url->slug(), "c-") !== false) || (strpos($url->slug(), "t-") !== false) ){
 						if(strpos($url->slug(), "p-") !== false){ $tipoMoneda=" ".$moneda;}
-						echo "/".ucwords(substr($url->slug(), 2)).$tipoMoneda;
+						echo " / ".ucwords(substr($url->slug(), 2)).$tipoMoneda;
 					}else{
-					echo "/".ucwords($url->slug());
+					echo " / ".ucwords($url->slug());
 					}
 				} ?>	
 				</span>

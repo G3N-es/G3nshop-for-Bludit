@@ -26,7 +26,7 @@
 				<h4><?php echo $language->p('tags'); ?></h4>					
 				<ul class="tags genericas">
 				<?php foreach ($filtrosEtiqueta as $tagKey=>$tagName):?>
-					<li class="<?php echo $tagKey?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey."?GS" ?>"><?php echo $tagName; ?></a></li>
+					<li class="<?php echo $tagKey; if($url->slug() === $tagKey) echo " active"; ?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey."?GS" ?>"><?php echo $tagName; ?></a></li>
 				<?php endforeach ?>
 				</ul>
 			<?php } ?>
@@ -35,7 +35,7 @@
 				<ul class="tags precios">
 			<?php	ksort($filtrosPrecio);
 					foreach ($filtrosPrecio as $tagKey=>$tagName):?>
-					<li class="<?php echo "precio ".$tagKey ?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey."?GS" ?>"><?php echo $tagName." ".$moneda; ?></a></li>
+					<li class="<?php echo "precio ".$tagKey; if($url->slug() === $tagKey) echo " active"; ?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey."?GS" ?>"><?php echo $tagName." ".$moneda; ?></a></li>
 			<?php endforeach ?>
 				</ul>
 			<?php } ?>
@@ -43,7 +43,7 @@
 				<h4><?php echo $language->p('tallas'); ?></h4>	
 				<ul class="tags tallas">
 				<?php foreach ($filtrosTalla as $tagKey=>$tagName):?>
-					<li class="<?php echo "talla ".$tagKey?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey."?GS" ?>"><?php echo $tagName; ?></a></li>
+					<li class="<?php echo "talla ".$tagKey; if($url->slug() === $tagKey) echo " active"; ?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey."?GS" ?>"><?php echo $tagName; ?></a></li>
 				<?php endforeach ?>
 				</ul>
 			<?php } ?>
@@ -51,7 +51,7 @@
 				<h4><?php echo $language->p('colores'); ?></h4>	
 				<ul class="tags colores">
 				<?php foreach ($filtrosColor as $tagKey=>$tagName):?>
-					<li class="<?php echo "color ".$tagKey?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey."?GS" ?>"><?php echo $tagName; ?></a></li>
+					<li class="<?php echo "color ".$tagKey; if($url->slug() === $tagKey) echo " active"; ?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey."?GS" ?>"><?php echo $tagName; ?></a></li>
 				<?php endforeach ?>
 				</ul>
 			<?php } ?>

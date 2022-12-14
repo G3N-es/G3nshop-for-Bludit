@@ -8,7 +8,7 @@
 				<div class="after-post-tags">
 					<ul class="tags">
 						<?php foreach ($etiquetasBlog as $tagKey=>$tagName): ?>
-						<li><a href="<?php echo DOMAIN_TAGS.$tagKey ?>"><?php echo $tagName; ?></a></li>
+						<li class="<?php echo $tagKey; if($url->slug() === $tagKey) echo " active"; ?>" ><a href="<?php echo DOMAIN_TAGS.$tagKey ?>"><?php echo $tagName; ?></a></li>
 						<?php endforeach ?>
 					</ul>
 				</div>

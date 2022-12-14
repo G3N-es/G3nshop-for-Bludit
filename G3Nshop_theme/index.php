@@ -22,7 +22,7 @@
 		}
 		if ($WHERE_AM_I == 'category' || $WHERE_AM_I == 'tag' || $WHERE_AM_I == 'search') {
 				$PageTemplate = "category";
-				if ($WHERE_AM_I == 'tag') {
+				/*if ($WHERE_AM_I == 'tag') {
 					//categoría asociada al tag segun contenido
 					$tagActual = new Tag($url->slug());
 					foreach ($tagActual->pages() as $pageKey) {
@@ -36,7 +36,7 @@
 						break;
 					}
 					
-				}
+				}*/
 		}
 		if (pluginActivated('pluginG3Nshop')){
 			
@@ -160,7 +160,7 @@
 	<script>
         paypal.minicart.render({
         	action: '<?php echo $urlPaypal; ?>',
-        	//styles: '', (para incluir estilos propios)
+        	styles: '', //(para incluir estilos propios)
        		strings: {
         		button: '<?php echo $language->p("pague-con"); ?> <img src="<?php echo Theme::src('img/'); ?>PP_logo_h_100x26.png" width="100" height="26" alt="PayPal" />',
               	subtotal: 'Total:',

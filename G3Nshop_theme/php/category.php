@@ -16,9 +16,7 @@
 					</a>
 					<?php } ?>
 			<?php	if ($WHERE_AM_I=='tag') { $Seccion= new Tag($url->slug());?>
-					<a href="<?php echo DOMAIN_CATEGORIES.$enlaceCategoriaTag; ?>">
-						<?php echo $nombreCategoriaTag; ?>
-					</a>/<?php echo $Seccion->name(); ?>
+					<?php echo $language->p('tag').": ".$Seccion->name(); ?>
 			<?php } ?>		
 		<?php }else{
 					$LoBuscado=explode("/", $url->slug());

@@ -431,16 +431,25 @@ EOT;
 		}
 		$verArrayColores= implode(" ", $arrayColores);
 		if($esEdicionProducto == 'loEs' || isset($_GET['GS'])){	
-			$categoriaTienda=$this->getValue('categoria');
+		$categoriaTienda=$this->getValue('categoria');
           $html.=<<<EOT
           $("#jstypeSelector").parent().hide();
           $("#jstitle").after(
               '<small class="form-text">$L_Precio</small><input  type="number" placeholder="0,00" min="0"  step="0.01" id="precio" class="form-control mt-1" value="$precio" />'
           +	'<small class="form-text">$L_Tallas ($L_Separar_por_comas)</small><input type="text" id="tallas" class="form-control mt-1" value="$tallas" placeholder="M, L, XL" />'
           +	'<small class="form-text">$L_Colores ($L_Separar_por_comas)</small><input type="text" id="colores" class="form-control mt-1" value="$colores" placeholder="$L_ColoresDeEjemplo"/><br>'
-          );
-
-          $("#jstags").val("$etiquetasNormales");
+		);
+EOT;
+			if(isset($_GET['GS'])){
+		$html.=<<<EOT
+		$("#jscategory").parent().remove();
+		$("#jsdescription").after(
+			'<input  type="hidden" id="jscategory" name="category" value="$categoriaTienda" />'
+		);
+EOT;
+			}
+		$html.=<<<EOT
+		$("#jstags").val("$etiquetasNormales");
           $("#jsbuttonSave").mouseup(function() {
               var Precio = "";
               var Tallas = "";
@@ -503,14 +512,14 @@ EOT;
 			foreach ($pages->db as $key => $value){
               	$titulo= strtolower($value['title']);
               	$html.=<<<EOT
-              $("div > a[href='/admin/edit-content/$key']").prepend("<span style='display:none' >$titulo</span>");
+              $("div > a[href*='/admin/edit-content/$key']").prepend("<span style='display:none' >$titulo</span>");
 EOT; 
 				if($value['category'] === $this->getValue('categoria') ){
 				$etiquetas= htmlentities(str_replace("{",": ",strtolower(implode(", ",$value['tags'])))).",";
 				$etiquetaProducto= strtolower($L_Producto);
 				$html.=<<<EOT
-		$("div > a[href='/admin/edit-content/$key']").prepend("<sup class='fa fa-shopping-cart'></sup>");
-		$("div > a[href='/admin/edit-content/$key']").parent().append("<br><small style='text-transform: capitalize'>$etiquetaProducto: $etiquetas</small>");
+		$("div > a[href*='/admin/edit-content/$key']").prepend("<sup class='fa fa-shopping-cart'></sup>");
+		$("div > a[href*='/admin/edit-content/$key']").parent().append("<br><small style='text-transform: capitalize'>$etiquetaProducto: $etiquetas</small>");
 EOT; 
 				}
 			}
