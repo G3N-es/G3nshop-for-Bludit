@@ -599,9 +599,11 @@ a img.nav-svg-icon {
 .active, .active:hover {
 	box-shadow: 0 20px 40px #cccccccc !important;
 }
+.footer .nav-item {
+	padding: 10px;
+}
 
-
-// ------------------------------------------------------------MiniCart
+/* ______________MiniCart______________ */
 
 @keyframes pop-in {
     0% { opacity: 0; transform: scale(0.1); }
