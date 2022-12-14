@@ -25,7 +25,7 @@
 			<?php } ?>
 			<?php foreach ($categories->db as $key=>$fields){ ?>
 				<?php if ($key !== $catecoriaG3Nshop){ ?>
-			<li class="nav-item <?php echo (($getTienda === "" && ($url->slug()==$key || $WHERE_AM_I !== 'home')) ? 'active' :'') ?>" >
+			<li class="nav-item <?php echo (($getTienda === "" && ($url->slug()==$key)) ? 'active' :'') ?>" >
 				<a title="<?php echo $fields['description']; ?>" class="nav-link <?php echo $fields['name']; ?>" href="<?php echo DOMAIN_CATEGORIES.$key; ?>"><?php echo $fields['name']; ?></a>
 			</li>
 				<?php } ?>
