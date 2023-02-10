@@ -1,0 +1,13 @@
+{
+	"theme-data":
+	{
+		"name": "G3Nshop",
+		"description": "Theme kompatibel mit G3Nshop-Plugin"
+	},
+
+  "no-pages-found": "Keine Seiten gefunden",
+  "complete-the-description-of-the-article": "Vervollständigen Sie die Beschreibung des Artikels.",
+  "pague-con": "Zahlen mit",
+  "el-carrito-esta-vacio": "Warenkorb ist leer",
+  "filtros":"Filter"
+}
