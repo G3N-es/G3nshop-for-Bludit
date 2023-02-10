@@ -1,0 +1,32 @@
+{
+  "plugin-data":
+  {
+    "name": "G3Nshop",
+    "description": "Einfache Online-Shoplösung für Bludit."
+  },
+  "categoria-tienda": "Shopkategorie",
+  "categorias": "Kategorien",
+  "moneda": "Währung",
+  "tienda": "G3Nshop",
+  "producto": "Produkt",
+  "productos-publicados": "Veröffentlichte Produkte",
+  "precio": "Preis",
+  "tallas" : "Größen",
+  "colores": "Farben",
+  "separar-x-comas": "Mit Kommas trennen",
+  "colores-ejemplo": "Rot, Grün, Blau",
+  "buscar": "Suchen",
+  "resultados": "Ergebnisse",
+  "cuenta-paypal": "Paypal-Konto",
+  "modo-paypal": "Paypal-Modus",
+  "pruebas": "Test",
+  "ventas": "Verkäufe",
+  "css-personalizado": "Benutzerdefiniertes CSS",
+  "carrito": "Warenkorb",
+  "precios": "Preise",
+  "relacionados": "Verwandte",
+  "busqueda": "Suche",
+  "agregar-carro": "Zum Warenkorb hinzufügen",
+  "donar": "Um die Entwicklung dieses kostenlosen Plugins fortzusetzen, ist deine Unterstützung erforderlich<h3>Überlege, eine Spende zu tätigen</h3>",
+  "otros": "Andere"
+}
