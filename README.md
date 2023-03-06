@@ -2,7 +2,7 @@
 ### G3Nshop plugin + theme | Ecommerce solution for Bludit 3.14.1
 [Demo Front End](https://css-proyectos.x10.bz/)
 
-php 7.x compatible (not php 8.x)
+> php 7.x compatible (not php 8.x)
 
 **Installation**:
 
@@ -32,7 +32,7 @@ Your support is needed to continue the development of this free plugin
 ### G3Nshop plugin + tema | Solución de tienda on-line para Bludit 3.14.1
 [Demo Vista Cliente](https://css-proyectos.x10.bz/)
 
-php 7.x compatible (not php 8.x)
+> php 7.x compatible (not php 8.x)
 
 **Instalación**:
 
