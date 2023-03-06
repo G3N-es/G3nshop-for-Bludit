@@ -1,7 +1,9 @@
 ### [en]
 ### G3Nshop plugin + theme | Ecommerce solution for Bludit 3.14.1
 [Demo Front End](https://css-proyectos.x10.bz/)
+
 php 7.x compatible (not php 8.x)
+
 **Installation**:
 
 - Copy the folder G3Nshop_plug in bl-plugins, and the folder G3Nshop_theme in bl-themes.
@@ -29,7 +31,9 @@ Your support is needed to continue the development of this free plugin
 ### [es]
 ### G3Nshop plugin + tema | Solución de tienda on-line para Bludit 3.14.1
 [Demo Vista Cliente](https://css-proyectos.x10.bz/)
+
 php 7.x compatible (not php 8.x)
+
 **Instalación**:
 
 - Copia la carpeta G3Nshop_plug en bl-plugins, y la carpeta G3Nshop_theme en bl-themes.
