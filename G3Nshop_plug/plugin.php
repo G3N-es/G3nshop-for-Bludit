@@ -307,7 +307,7 @@ class pluginG3Nshop extends Plugin {
 	public function adminBodyEnd() {
 		
 		global $L, $pages, $site;
-		$urlEdicion=$_SERVER['REDIRECT_URL'];
+		$urlEdicion=$_SERVER['REQUEST_URI'];
 		$sitioURL= $site->url();
 		if (substr($sitioURL, -1) === "/"){ $sitioURL= substr($sitioURL,0,-1); }
 		$paginaAdmin= explode( "/", $urlEdicion);
@@ -326,49 +326,7 @@ class pluginG3Nshop extends Plugin {
 		$L_resultados=$L->get('resultados');
 			
 		// capturamos datos que nos son necesarios
-		// Si es configure-plugin/pluginG3Nshop
-		if(stripos($urlEdicion, 'configure-plugin/pluginG3Nshop') !== false ){
-        echo '
-<style>
-#donar {
-  border: 5px solid  #fd0;
-  margin: 0 0 100px 0;
-  background-image: linear-gradient(#fd8, #ffc);
-}
-#donar #texto{
-  padding: 20px;
-  font-size: 1.2em;
-  text-align: center;
-  background-image: linear-gradient(#ffffffaa, #ffffff55);
-}
-#donar ul{
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 45px 0 60px 0;
-}
-#donar li{
-  list-style: none;
-}
-#donar li a{
-  color: #00000099;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 20px;
-  margin: 10px;
-  background: #fe0;
-  box-shadow: 0px 5px 10px #00000055;
-  border: 1px solid #eee;
-  border-radius: 10px !important;
-  }
-  #donar li a:hover{
-  filter: brightness(1.2);
-  box-shadow: 5px 10px 20px #00000055;
-}
-
-</style>
-';
-        }
+		
 		// Si es editar
 		if(stripos($urlEdicion, 'edit-content') !== false ){
 			$paginaEditar= explode( "/", $urlEdicion);
@@ -402,8 +360,6 @@ EOT;
 	
 	//Capturar el key de la Session URL
 	//Si captura "edit-content" debe cumplimentar los campos
-	//$page= new Page('desarrollo-a-medida');//(key)
-	//$page->cumstom() // dar formato y añadir al html que inyecta jquery
 			
 		if($esEdicionProducto == 'loEs'){
 			//Extraemos las etiquetas y las filtramos
@@ -429,7 +385,7 @@ EOT;
 			$colores= substr($colores, 0, -2);
 			$etiquetasNormales= substr($etiquetasNormales, 0, -2);
 		}
-		$verArrayColores= implode(" ", $arrayColores);
+		
 		if($esEdicionProducto == 'loEs' || isset($_GET['GS'])){	
 		$categoriaTienda=$this->getValue('categoria');
           $html.=<<<EOT
@@ -515,11 +471,11 @@ EOT;
               $("div > a[href*='/admin/edit-content/$key']").prepend("<span style='display:none' >$titulo</span>");
 EOT; 
 				if($value['category'] === $this->getValue('categoria') ){
-				$etiquetas= htmlentities(str_replace("{",": ",strtolower(implode(", ",$value['tags'])))).",";
+				$etiquetas= htmlentities(str_replace("{",": ",strtolower(implode(", ",$value['tags']))));
 				$etiquetaProducto= strtolower($L_Producto);
 				$html.=<<<EOT
 		$("div > a[href*='/admin/edit-content/$key']").prepend("<sup class='fa fa-shopping-cart'></sup>");
-		$("div > a[href*='/admin/edit-content/$key']").parent().append("<br><small style='text-transform: capitalize'>$etiquetaProducto: $etiquetas</small>");
+		$("div > a[href*='/admin/edit-content/$key']").parent().append("<br><small style='text-transform: capitalize'>$etiquetaProducto{ $etiquetas</small>");
 EOT; 
 				}
 			}
@@ -546,6 +502,51 @@ EOT;
     public function siteHead() {
       echo "<style>".$this->getValue('cssPersonalizado')."</style>";
       
+    }
+	public function adminHead() {
+		$urlEdicion=$_SERVER['REQUEST_URI'];
+		// Si es configure-plugin/pluginG3Nshop
+		if(stripos($urlEdicion, 'configure-plugin/pluginG3Nshop') !== false ){
+        echo '
+<style>
+#donar {
+  border: 5px solid  #fd0;
+  margin: 0 0 100px 0;
+  background-image: linear-gradient(#fd8, #ffc);
+}
+#donar #texto{
+  padding: 20px;
+  font-size: 1.2em;
+  text-align: center;
+  background-image: linear-gradient(#ffffffaa, #ffffff55);
+}
+#donar ul{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 45px 0 60px 0;
+}
+#donar li{
+  list-style: none;
+}
+#donar li a{
+  color: #00000099;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px;
+  margin: 10px;
+  background: #fe0;
+  box-shadow: 0px 5px 10px #00000055;
+  border: 1px solid #eee;
+  border-radius: 10px !important;
+  }
+  #donar li a:hover{
+  filter: brightness(1.2);
+  box-shadow: 5px 10px 20px #00000055;
+}
+</style>
+';
+        }   
     }
 	
 	
