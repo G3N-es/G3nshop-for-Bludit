@@ -269,25 +269,6 @@ class pluginG3Nshop extends Plugin {
 	<label>'.$L->get('css-personalizado').'</label>
 	<textarea name="cssPersonalizado">'.$this->getValue('cssPersonalizado').'</textarea>
 </div>
-<hr>
-<div id="donar">
-	<div id="texto">'.$L->get('donar').'</div>
-	<ul>
-		<li id="primero">
-			<a target="black" href="https://PayPal.Me/g3nWebAPPs/10">10€</a>
-		</li>
-		<li id="segundo">
-			<a target="black" href="https://PayPal.Me/g3nWebAPPs/20">20€</a>
-		</li>
-		<li id="tercero">
-			<a target="black" href="https://PayPal.Me/g3nWebAPPs/40">40€</a>
-		</li>
-		<li id="cuarto">
-			<a target="black" href="https://PayPal.Me/g3nWebAPPs/">'.$L->get('otros').'</a>
-		</li>
-	</ul>
-</div>
-<br>
 ';      
 		return $html;
 	} // Fin form()
@@ -502,52 +483,5 @@ EOT;
     public function siteHead() {
       echo "<style>".$this->getValue('cssPersonalizado')."</style>";
       
-    }
-	public function adminHead() {
-		$urlEdicion=$_SERVER['REQUEST_URI'];
-		// Si es configure-plugin/pluginG3Nshop
-		if(stripos($urlEdicion, 'configure-plugin/pluginG3Nshop') !== false ){
-        echo '
-<style>
-#donar {
-  border: 5px solid  #fd0;
-  margin: 0 0 100px 0;
-  background-image: linear-gradient(#fd8, #ffc);
-}
-#donar #texto{
-  padding: 20px;
-  font-size: 1.2em;
-  text-align: center;
-  background-image: linear-gradient(#ffffffaa, #ffffff55);
-}
-#donar ul{
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 45px 0 60px 0;
-}
-#donar li{
-  list-style: none;
-}
-#donar li a{
-  color: #00000099;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 20px;
-  margin: 10px;
-  background: #fe0;
-  box-shadow: 0px 5px 10px #00000055;
-  border: 1px solid #eee;
-  border-radius: 10px !important;
-  }
-  #donar li a:hover{
-  filter: brightness(1.2);
-  box-shadow: 5px 10px 20px #00000055;
-}
-</style>
-';
-        }   
-    }
-	
-	
+    }	
 }
